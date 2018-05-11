@@ -1,1 +1,49 @@
+<div class="center">
+  <h1><strong><i>DATOS DEL CLIENTE</i></strong></h1>
+</div>
+
+<div class="">
+  <td>{{model.username}}</td>
+</div>
+<div class="">
+  <img src="{{model.profilePicture}}" alt="">
+</div>
+<div class="">
+  First Name: {{model.firstName}}
+</div>
+<div class="">
+ Last Name: {{model.lastName}}
+</div>
+<div class="">
+  Posts:
+<table class="table table-bordered" border="9">
+  <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Published date</th>
+        <th>content</th>
+      </tr>
+    </thead>
+  {{#each model.posts as |post|}}
+      <tbody>
+        <tr>
+        <td>
+          <button type="submit" name="action" >Delete post</button>
+        </td>
+        <td>
+          {{post.title}}
+        </td>
+        <td>
+          {{post.publishedAt}}
+        </td>
+        <td>
+          {{post.content}}
+        </td>
+        </tr>
+      </tbody>  
+  {{/each}}
+</table>
+</div>
+
 {{outlet}}
