@@ -1,18 +1,18 @@
 <div class="center">
-  <h1><strong><i>DATOS DEL CLIENTE</i></strong></h1>
+  <h1><strong><i>DATOS DEL AUTHOR</i></strong></h1>
 </div>
 
 <div class="">
-  <td>{{model.username}}</td>
+  <td>{{model.author.username}}</td>
 </div>
 <div class="">
-  <img src="{{model.profilePicture}}" alt="">
+  <img src="{{model.author.profilePicture}}" alt="">
 </div>
 <div class="">
-  First Name: {{model.firstName}}
+  First Name: {{model.author.firstName}}
 </div>
 <div class="">
- Last Name: {{model.lastName}}
+ Last Name: {{model.author.lastName}}
 </div>
 <div class="">
   Posts:
@@ -41,7 +41,7 @@
           {{post.content}}
         </td>
         </tr>
-      </tbody>  
+      </tbody>
   {{/each}}
 </table>
 </div>
