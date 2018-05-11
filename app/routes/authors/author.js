@@ -7,6 +7,7 @@ export default Route.extend({
     const author = authors.findBy('id', id);
     const posts = author.get('posts');
     return{
+        authors,
         author,
         posts
       };
